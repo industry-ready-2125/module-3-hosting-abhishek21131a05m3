@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: #fff;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            margin-right: 20px;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            border-bottom-color: #ffd700;
+            transform: scale(1.1);
+        }
+
+        .order-button {
+            background-color: #ffd700;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: #e0ac00;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="bb1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1>Welcome to Our Burger Website</h1>
+        <p>Delicious burgers made just for you!</p>
+        <a href="page02.html" class="order-button">Order Now</a>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="page02.html">Order</a>
+        <a href="page03.html">Contact</a>
+    </nav>
+</body>
+</html>
