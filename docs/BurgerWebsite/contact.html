@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: #fff;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            margin-right: 20px;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            border-bottom-color: #ffd700;
+            transform: scale(1.1);
+        }
+
+        header {
+            text-align: center;
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 50px auto; /* Center horizontally and vertically */
+            background-color: rgba(255, 255, 255, 0.9); /* Adjusted transparency */
+            padding: 40px; /* Increased padding for a better look */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #4caf50; /* Green border color */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+            background-color: rgba(255, 255, 255, 0.95); /* More opaque background */
+            transition: border-color 0.3s, background-color 0.3s; /* Smoother transitions */
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        /* Style for text boxes on focus */
+        input[type="text"]:focus, textarea:focus {
+            border-color: #45a049; /* Change border color on focus */
+            outline: none; /* Remove the default outline */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px; /* Adjusted margin to prevent overlap */
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop>
+        <source src="bb3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 Your Company Name. All rights reserved.
+    </footer>
+</body>
+</html>
